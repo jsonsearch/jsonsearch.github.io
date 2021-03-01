@@ -14,9 +14,9 @@
           <form action="/jsonsearch/" method="GET">
             <input type="url" name="url" required autofocus autocorrect="off" autocapitalize="off" placeholder="Type JSON database URL">
             <label>dataType for URL:</label>
-            <select name="type">
-                <option value="raw">Raw</option>
-                <option value="json">JSON</option>
+            <select name="proxied">
+                <option value="false">Don't proxy the URL</option>
+                <option value="true">Proxy the URL</option>
             </select>
             <input type="submit" value="Submit">
           </form>
