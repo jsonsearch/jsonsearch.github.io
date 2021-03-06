@@ -16,9 +16,20 @@
             <input type="url" name="url" required autofocus autocorrect="off" autocapitalize="off" placeholder="Type JSON database URL">
             <label>Proxy option:</label>
             <select name="proxied">
-                <option value="false">Don't proxy the URL</option>
+                <option value="false" selected>Don't proxy the URL</option>
                 <option value="true">Proxy the URL</option>
             </select>
+            <div id="settings">
+            <label>Proxy settings:</label>
+            <select name="settings">
+                <option value="default" selected>https://miniurlid.000webhostapp.com/app/fileproxy?url=%e</option>
+                <option value="custom">Custom Proxy URL</option>
+            </select>
+            </div>
+            <div id="custom">
+            <label>Custom Proxy URL:</label>
+            <input type="url" name="custom" placeholder="Use %e for encoded URL and %r for raw URL">
+            </div>
             <input type="submit" value="Submit">
           </form>
         </div>
