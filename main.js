@@ -1,4 +1,8 @@
 var temp = "";
+if (getCookie("proxy") != null && getCookie("proxy") != "") {
+    temp = getCookie("proxy");
+    document.querySelector("input[type=button]").style.display = "block";
+}
 document.querySelector('select[name=proxied]').onchange = function() {
   var optionval = document.querySelector('select[name=proxied]').value;
   if (optionval == "true") {
@@ -41,10 +45,6 @@ function getCookie(cname) {
       }
     }
     return "";
-}
-if (getCookie("proxy") != null && getCookie("proxy") != "") {
-    document.querySelector("input[type=button]").style.display = "block";
-    document.querySelector("input[name=custom]").value = getCookie("proxy");
 }
 document.querySelector("input[type=button]").onclick = function() {
     document.querySelector("input[name=custom]").value = "";
