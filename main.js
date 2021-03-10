@@ -51,7 +51,7 @@ document.querySelector("input[type=button]").onclick = function() {
     document.cookie="proxy=;expires=Thu, 01 Jan 1970 12:00:00 UTC";
     document.querySelector("input[type=button]").style.display = "none";
 }
-document.querySelector("[action=/jsonsearch/]").onsubmit = function() {
+document.querySelector("form").onsubmit = function() {
     var x = document.querySelector("[name=custom]").value;
     if (x.search("%e") == -1 || x.search("%e") == -1) {
         document.querySelector("#error-text").innerHTML = "Custom proxy URL doesn't contain %e or %r";
