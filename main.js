@@ -70,6 +70,7 @@ document.querySelector("form").onsubmit = function() {
     if (x.search("%e") == -1 || x.search("%e") == -1) {
         document.querySelector("#error-text").innerHTML = "Custom proxy URL doesn't contain %e or %r";
         document.querySelector(".error-banner").style.display = "flex";
+        document.querySelector(".error-banner").style.opacity = 1;
         return false;
     }
 }
