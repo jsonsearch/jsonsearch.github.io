@@ -67,7 +67,8 @@ function fadeOutEffect() {
 document.querySelector(".close-banner").addEventListener('click', fadeOutEffect);
 document.querySelector("form").onsubmit = function() {
     var x = document.querySelector("[name=custom]").value;
-    if (document.querySelector("select[name=settings]").selectedIndex = 1 && (x.search("%e") == -1 || x.search("%e") == -1)) {
+    var y = document.querySelector("select[name=settings]").selectedIndex;
+    if (y == 1 && (x.search("%e") == -1 || x.search("%e") == -1)) {
         document.querySelector("#error-text").innerHTML = "Custom proxy URL doesn't contain %e or %r";
         document.querySelector(".error-banner").style.display = "flex";
         document.querySelector(".error-banner").style.opacity = 1;
