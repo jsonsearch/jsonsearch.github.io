@@ -37,4 +37,5 @@ if (getCookie("proxy") != null && getCookie("proxy") != "") {
 document.querySelector("input[type=button]").onclick = function() {
     document.querySelector("input[name=custom]").value = "";
     document.cookie="proxy=;expires=Thu, 01 Jan 1970 12:00:00 UTC";
+    document.querySelector("input[type=button]").style.display = "none";
 }
