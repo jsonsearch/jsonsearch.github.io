@@ -5,6 +5,7 @@ document.querySelector('select[name=proxied]').onchange = function() {
   } else {
       document.getElementById("settings").style.display = "none";
       document.getElementById("custom").style.display = "none";
+      document.querySelector("select[name=settings]").selectedIndex = 0;
   }
 }
 document.querySelector('select[name=settings]').onchange = function() {
