@@ -1,3 +1,4 @@
+var temp = "";
 document.querySelector('select[name=proxied]').onchange = function() {
   var optionval = document.querySelector('select[name=proxied]').value;
   if (optionval == "true") {
@@ -6,14 +7,19 @@ document.querySelector('select[name=proxied]').onchange = function() {
       document.getElementById("settings").style.display = "none";
       document.getElementById("custom").style.display = "none";
       document.querySelector("select[name=settings]").selectedIndex = 0;
+      temp = document.querySelector("input[name=custom]").value;
+      document.querySelector("input[name=custom]").value = "";
   }
 }
 document.querySelector('select[name=settings]').onchange = function() {
   var optionval = document.querySelector('select[name=settings]').value;
   if (optionval == "custom") {
+      document.querySelector("input[name=custom]").value = temp;
       document.getElementById("custom").style.display = "block";
   } else {
       document.getElementById("custom").style.display = "none";
+      temp = document.querySelector("input[name=custom]").value;
+      document.querySelector("input[name=custom]").value = "";
   }
 }
 function setCookie(cname, cvalue, exdays) {
