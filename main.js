@@ -1,13 +1,18 @@
 document.querySelector('select[name=proxied]').onchange = function() {
   var optionval = document.querySelector('select[name=proxied]').value;
   if (optionval == "true") {
-  document.getElementById("settings").style.display = "block";
+      document.getElementById("settings").style.display = "block";
+  } else {
+      document.getElementById("settings").style.display = "none";
+      document.getElementById("custom").style.display = "none";
   }
 }
 document.querySelector('select[name=settings]').onchange = function() {
   var optionval = document.querySelector('select[name=settings]').value;
   if (optionval == "custom") {
-  document.getElementById("custom").style.display = "block";
+      document.getElementById("custom").style.display = "block";
+  } else {
+      document.getElementById("custom").style.display = "none";
   }
 }
 function setCookie(cname, cvalue, exdays) {
