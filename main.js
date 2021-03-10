@@ -51,6 +51,20 @@ document.querySelector("input[type=button]").onclick = function() {
     document.cookie="proxy=;expires=Thu, 01 Jan 1970 12:00:00 UTC";
     document.querySelector("input[type=button]").style.display = "none";
 }
+function fadeOutEffect() {
+    var fadeTarget = document.querySelector(".error-banner");
+    var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+        }
+    }, 200);
+}
+document.querySelector(".close-banner").addEventListener('click', fadeOutEffect);
 document.querySelector("form").onsubmit = function() {
     var x = document.querySelector("[name=custom]").value;
     if (x.search("%e") == -1 || x.search("%e") == -1) {
