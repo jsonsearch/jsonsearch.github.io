@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSONSearch | Web live search engine for JSON database</title>
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="jsonsearch/assets/style.css" type="text/css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+<meta name="robots" content="none" />
+</head>
+<body class="bgcolor">
+  <center class="bgcolor">
+    <h2>JSONSearch | Web live search engine for JSON database</h2>
+    <div class="maxwidth">
+    	<div class="form">
+          <form action="/jsonsearch/" method="GET">
+            <label>Database URL:</label>
+            <input type="url" name="url" required autofocus autocorrect="off" autocapitalize="off" placeholder="Type JSON database URL">
+            <label>Proxy option:</label>
+            <select name="proxied">
+                <option value="false" selected>Don't proxy the URL</option>
+                <option value="true">Proxy the URL</option>
+            </select>
+            <div id="settings">
+            <label>Proxy settings:</label>
+            <select name="settings">
+                <option value="default" selected>https://xyti.000webhostapp.com/fileproxy?url=%e</option>
+                <option value="custom">Custom Proxy URL</option>
+            </select>
+            </div>
+            <div id="custom">
+            <label>Custom Proxy URL:</label>
+            <input type="url" name="custom" placeholder="Use %e for encoded URL and %r for raw URL">
+            <input type="button" value="Clear saved custom proxy URL">
+            </div>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+    </div>
+  </center>
+  <div class="error-banner">
+    <p style="color:black;" id="error-text"></p>
+    <a class="close-banner">&times;</a>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
